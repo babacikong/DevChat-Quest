@@ -1,7 +1,6 @@
-Here's my DevChat Quest Progress, Credit and big Thanks goes to coinsspor and Snafyr for making this completed.
+I'm assuming you already have aos
 
 
-Assuming you already have aos
 
 Step 1 : Run this command in root;
 ```
@@ -10,7 +9,6 @@ npm install discord.js ws @permaweb/aoconnect fs
 
 Step 2 : Project Directory Structure
 ```
- /root/DevChat/src/
 ├── capture.js
 ├── index.js
 ├── process.lua
@@ -37,16 +35,16 @@ the other files are just fine
 Step 4 : Run these commands on aos
 
 ```
-.load /root/DevChat/src/router.lua
-.load /root/DevChat/src/client.lua
-.load /root/DevChat/src/chatroom.lua
-.load /root/DevChat/src/process.lua
+.load router.lua
+.load client.lua
+.load chatroom.lua
+.load process.lua
 ```
 
 Step 5 : Register the Channel
 
 ```
-ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = ao.id })
+ao.send({ Target = "VFiFdJO6b9E96moiBprEWvb4kD775t0LvtBv3aP71eo", Action = "Register", Name = ao.id })
 ```
 
 Step 6 : Join the registered channel in the aos terminal
@@ -60,13 +58,13 @@ Step 7 : Open 2 new screens
 In one of them run ;
 
 ```
-node /root/DevChat/src/index.js
+node index.js
 ```
 
 and in the second one run ;
 
 ```
-node /root/DevChat/src/capture.js
+node capture.js
 ```
 
 In total you need to have 3 screens. You can close them later.
