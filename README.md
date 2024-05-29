@@ -1,3 +1,6 @@
+Here's my DevChat Quest Progress, Credit and big Thanks goes to coinsspor and Snafyr making this completed.
+
+
 Assuming you already have aos
 
 Step 1 : Run this command in root;
@@ -78,4 +81,5 @@ Check if the bot send the message to your server.
 
 The result should look like this;
 
-![image](https://github.com/babacikong/)
+!<img width="365" alt="image" src="https://github.com/babacikong/DevChat-Quest/assets/157308881/4b7732f6-fd38-45db-96ae-4147911ecdac">
+
