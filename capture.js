@@ -12,7 +12,7 @@ ws.on('error', (error) => {
   console.error('WebSocket error:', error);
 });
 
-// DevChatCheking fonksiyonunu tanımla
+// Define DevChatCheking function
 async function DevChatCheking() {
   try {
     if (cursor == '') {
