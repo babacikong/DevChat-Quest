@@ -81,5 +81,5 @@ Check if the bot send the message to your server.
 
 The result should look like this;
 
-!<img width="365" alt="image" src="https://github.com/babacikong/DevChat-Quest/assets/157308881/4b7732f6-fd38-45db-96ae-4147911ecdac">
+<img width="365" alt="image" src="https://github.com/babacikong/DevChat-Quest/assets/157308881/4b7732f6-fd38-45db-96ae-4147911ecdac">
 
