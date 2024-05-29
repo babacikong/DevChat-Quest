@@ -2,14 +2,14 @@ const { results } = require('@permaweb/aoconnect');
 const WebSocket = require('ws');
 
 let cursor = '';
-const ws = new WebSocket('ws://localhost:8080'); // WebSocket bağlantısını başlat
+const ws = new WebSocket('ws://localhost:8080'); // start WebSocket connection
 
 ws.on('open', () => {
-  console.log('WebSocket bağlantısı açıldı');
+  console.log('WebSocket connection opened');
 });
 
 ws.on('error', (error) => {
-  console.error('WebSocket hatası:', error);
+  console.error('WebSocket error:', error);
 });
 
 // DevChatCheking fonksiyonunu tanımla
@@ -22,7 +22,7 @@ async function DevChatCheking() {
         limit: 1,
       });
       cursor = resultsOut.edges[0].cursor;
-      console.log('İlk sonuçlar:', resultsOut);
+      console.log('first results:', resultsOut);
     }
 
     console.log('DevChatCheking------>>>>');
@@ -35,25 +35,25 @@ async function DevChatCheking() {
 
     for (const element of resultsOut2.edges.reverse()) {
       cursor = element.cursor;
-      console.log('Eleman Verisi:', element.node.Messages);
+      console.log('Element Data:', element.node.Messages);
 
       for (const msg of element.node.Messages) {
-        console.log('Mesaj Etiketleri:', msg.Tags);
+        console.log('Post Tags:', msg.Tags);
       }
 
       const messagesData = element.node.Messages.filter(e => e.Tags.length > 0 && e.Tags.some(f => f.name == 'Action' && f.value == 'Say'));
-      console.log('Filtrelenmiş Mesaj Verisi:', messagesData);
+      console.log('Filtered Message Data:', messagesData);
       for (const messagesItem of messagesData) {
           const event = messagesItem.Tags.find(e => e.name == 'Event')?.value || 'Message in babacikongRoom';
           const sendTest = event + ' : ' + messagesItem.Data;
-          console.log('Yakalanan Mesaj:', sendTest);
-          ws.send(sendTest); // WebSocket üzerinden mesajı gönder
+          console.log('Captured Message:', sendTest);
+          ws.send(sendTest); // Send message via WebSocket
       }
     }
 
   } catch (error) {
-    console.error('DevChatCheking hatası:', error);
-    console.error('Hata detayları:', error.message);
+    console.error('DevChatCheking error:', error);
+    console.error('Error details:', error.message);
   } finally {
     setTimeout(DevChatCheking, 5000);
   }
