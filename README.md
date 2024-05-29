@@ -1,4 +1,4 @@
-Here's my DevChat Quest Progress, Credit and big Thanks goes to coinsspor and Snafyr making this completed.
+Here's my DevChat Quest Progress, Credit and big Thanks goes to coinsspor and Snafyr for making this completed.
 
 
 Assuming you already have aos
