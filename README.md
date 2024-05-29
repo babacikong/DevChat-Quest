@@ -53,7 +53,7 @@ Step 6 : Join the registered channel in the aos terminal
 Join(ao.id)
 ```
 
-Step 7 : Open 2 new screens
+Step 7 : Open 2 new screens or 2 Terminals in my case
 
 In one of them run ;
 
