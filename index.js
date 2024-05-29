@@ -3,10 +3,10 @@ const WebSocket = require('ws');
 const { message, createDataItemSigner } = require('@permaweb/aoconnect');
 const { readFileSync } = require('fs');
 
-const token = 'YOUR DISCORD BOT TOKEN ID';
-const channelId = 'YOUR DISCORD CHANNEL ID'; // Discord kanal ID'si
+const token = 'YOUR DISCORD BOT TOKEN ID'; // Discord Bot Token ID
+const channelId = 'YOUR DISCORD CHANNEL ID'; // Discord Channel ID
 
-const walletPath = '/root/.aos.json'; // Doğru dosya yolu
+const walletPath = '/root/.aos.json'; // Correct file path
 const walletContent = JSON.parse(readFileSync(walletPath).toString());
 
 async function relayMessageToDevChat(incomingMsg) {
@@ -16,7 +16,7 @@ async function relayMessageToDevChat(incomingMsg) {
   console.log(`Preparing to relay message from ${senderName} to DevChat`);
 
   await message({
-    process: 'YOUR PROCESS ID', // Process ID doğru şekilde ayarlanmalı
+    process: 'YOUR PROCESS ID', // Process ID must be set correctly
     tags: [
       { name: 'Action', value: 'TransferToDevChat' },
       { name: 'Content', value: msgContent },
