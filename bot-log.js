@@ -12,8 +12,8 @@ ws.on('error', (error) => {
   console.error('WebSocket error:', error);
 });
 
-// Define DevChatCheking function
-async function DevChatCheking() {
+// Define DevChatChecking function
+async function DevChatChecking() {
   try {
     if (cursor == '') {
       const resultsOut = await results({
@@ -25,7 +25,7 @@ async function DevChatCheking() {
       console.log('first results:', resultsOut);
     }
 
-    console.log('DevChatCheking------>>>>');
+    console.log('DevChatChecking------>>>>');
     const resultsOut2 = await results({
       process: 'VFiFdJO6b9E96moiBprEWvb4kD775t0LvtBv3aP71eo',
       from: cursor,
@@ -44,19 +44,18 @@ async function DevChatCheking() {
       const messagesData = element.node.Messages.filter(e => e.Tags.length > 0 && e.Tags.some(f => f.name == 'Action' && f.value == 'Say'));
       console.log('Filtered Message Data:', messagesData);
       for (const messagesItem of messagesData) {
-          const event = messagesItem.Tags.find(e => e.name == 'Event')?.value || 'Message in babacikongRoom';
-          const sendTest = event + ' : ' + messagesItem.Data;
+        const sendTest = messagesItem.Data;
           console.log('Captured Message:', sendTest);
           ws.send(sendTest); // Send message via WebSocket
       }
     }
 
   } catch (error) {
-    console.error('DevChatCheking error:', error);
+    console.error('DevChatChecking error:', error);
     console.error('Error details:', error.message);
   } finally {
-    setTimeout(DevChatCheking, 5000);
+    setTimeout(DevChatChecking, 5000);
   }
 }
 
-DevChatCheking();
+DevChatChecking();
