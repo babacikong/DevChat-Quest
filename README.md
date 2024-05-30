@@ -64,7 +64,7 @@ node index.js
 and in the second one run ;
 
 ```
-node capture.js
+node bot-log.js
 ```
 
 In total you need to have 3 screens. You can close them later.
@@ -72,7 +72,7 @@ In total you need to have 3 screens. You can close them later.
 Step 8 : Testing the Setup Sending a Message from DevChat
 
 ```
-Say("Hello, this is a test message.", ao.id)
+Say("Hello, this is a test message.", "babacikong")
 ```
 
 my Discord Channel : https://discord.gg/xV8QKGxEhA
