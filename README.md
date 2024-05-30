@@ -9,7 +9,7 @@ npm install discord.js ws @permaweb/aoconnect fs
 
 Step 2 : Project Directory Structure
 ```
-├── capture.js
+├── bot-log.js
 ├── index.js
 ├── process.lua
 ├── client.lua
@@ -44,13 +44,13 @@ Step 4 : Run these commands on aos
 Step 5 : Register the Channel
 
 ```
-ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = ao.id })
+ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "babacikong" })
 ```
 
 Step 6 : Join the registered channel in the aos terminal
 
 ```
-Join(ao.id) //ur created rooms
+Join("babacikong", "aoBaba-Bot")
 ```
 
 Step 7 : Open 2 new screens or 2 Terminals in my case
