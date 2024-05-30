@@ -44,13 +44,13 @@ Step 4 : Run these commands on aos
 Step 5 : Register the Channel
 
 ```
-ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "babacikong" })
+ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = ao.id })
 ```
 
 Step 6 : Join the registered channel in the aos terminal
 
 ```
-Join("babacikong", "aoBaba-Bot")
+Join("babacikong", ao.id)
 ```
 
 Step 7 : Open 2 new screens or 2 Terminals in my case
@@ -77,7 +77,7 @@ Say("Hello, this is a test message.", "babacikong")
 
 my Discord Channel : https://discord.gg/xV8QKGxEhA
 
-Check if the bot send the message to your server.
+Check if the message has properly send to the server.
 
 The result should look like this;
 
